@@ -9,6 +9,7 @@ backend/.mypy_cache/
 backend/*.egg-info/
 __pycache__/
 *.py[cod]
+*.tsbuildinfo
 .env
 .env.*
 !.env.example

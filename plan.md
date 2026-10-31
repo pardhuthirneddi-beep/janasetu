@@ -18,6 +18,8 @@ Implement the relational schema for users, sessions, departments, jurisdictions,
 
 - `frontend/app/`: landing, service list/detail, assistant, login, dashboard, grievance submit/track and staff routes.
 - `frontend/components/`: accessible navigation, service discovery, citations, forms, timelines, staff actions and shared UI.
+- `frontend/app/template.tsx` and `frontend/components/HomeEffects.tsx`: subtle route transitions and landing-only Lenis/GSAP motion, with reduced-motion fallback.
+- `frontend/app/globals.css`, `civic.css` and locally bundled Fontsource packages: shared palette, responsive layout and deterministic typography.
 - `frontend/lib/`: typed API client, validation, formatting and role/session helpers.
 - `frontend/public/manus-routes.json`: actual App Router route manifest.
 - `backend/app/main.py`: FastAPI health, auth, public directory/assistant and protected grievance/staff endpoints.
@@ -33,17 +35,17 @@ Implement the relational schema for users, sessions, departments, jurisdictions,
 
 **Core Principles:** legibility before decoration; evidence and process stay visible; a warm, humane tone without false authority; operations favor predictable actions.
 
-**Color Philosophy:** warm ivory `#F4F3EC` makes the experience approachable; deep forest `#173D37` anchors trust; signal lime `#C7ED75` marks primary actions; civic coral `#D96E50` signals attention; quiet borders and secondary surfaces use `#D8D9CE` and `#E8E9DE`.
+**Color Philosophy:** warm white `#FAF8F2` gives the service a calm paper-like canvas; deep navy `#10223A` conveys public trust; muted teal `#2D7774` is a restrained navigation/action accent; pale teal `#E5F0ED`, ink `#263547`, and stone borders `#E2E1DB` create hierarchy without heavy panels.
 
-**Layout Paradigm:** asymmetric editorial landing with left-aligned narrative, compact civic illustration and full-width discovery. Citizen/staff screens use a compact operational shell, thin rules, generous whitespace and responsive columns rather than repetitive dashboard cards.
+**Layout Paradigm:** asymmetric editorial landing with a clear left narrative and carefully constrained existing civic illustration, paired with full-width discovery. Use a polished compact desktop header and a real mobile disclosure menu. Citizen/staff screens keep a quiet operational shell, distinct section hierarchy and responsive, scannable forms and records.
 
 **Signature Elements:** original bridge/linked-path mark; monospaced case references and source metadata; numbered status timeline that clarifies what happens next.
 
 **Interaction Philosophy:** direct controls, plain-language errors, nearby source links, explicit explanations for status changes, and motion that never obscures controls.
 
-**Animation:** subtle 150–400 ms entrances/focus/dialog/timeline motion; respect reduced-motion; no complex form or staff-table motion. Smooth scrolling is restricted to the public landing page and must retain native touch behavior.
+**Animation:** use Lenis for restrained smooth scrolling on the public landing page only; use GSAP + ScrollTrigger for a few meaningful section reveals; use Framer Motion for brief page entrances and component transitions. Keep interaction feedback to 150–300 ms, avoid form/table spectacle, retain native touch behavior, and disable nonessential motion for `prefers-reduced-motion`.
 
-**Typography System:** Fraunces display headlines, Manrope interface/body, Geist Mono references/timestamps, and a local Telugu-capable fallback. Use a responsive scale and efficient loading.
+**Typography System:** Fraunces variable for editorial display, Manrope variable for interface/body, and DM Mono for references/timestamps, all bundled locally so Preview does not depend on a third-party font request. Use a responsive scale and a Telugu-capable fallback.
 
 **Brand Essence:** an evidence-led route through Telangana public services and transparent local grievance workflow; trustworthy, humane and precise.
 
@@ -51,7 +53,7 @@ Implement the relational schema for users, sessions, departments, jurisdictions,
 
 **Wordmark & Logo:** original bridge/linked-path symbol with a carefully typeset JanSetu wordmark; never use a government seal or imitate a government logo.
 
-**Signature Brand Color:** deep forest `#173D37`, balanced with signal lime.
+**Signature Brand Color:** deep navy `#10223A`, softened by muted teal `#2D7774`.
 
 ## Material constraints
 

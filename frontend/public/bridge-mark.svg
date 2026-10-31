@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 72" role="img" aria-labelledby="title">
+  <title id="title">JanSetu bridge mark</title>
+  <g fill="none" stroke="#173D37" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="4.5" d="M7 48h11c8-27 30-27 39 0h11"/>
+    <path stroke-width="3" d="M11 55h52M18 48v7m37-7v7M28 28v13m18-13v13"/>
+  </g>
+  <circle cx="36.5" cy="23" r="5" fill="#C7ED75"/>
+  <text x="78" y="48" fill="#173D37" font-family="Manrope, Arial, sans-serif" font-size="29" font-weight="750" letter-spacing="-1.1">JanSetu</text>
+  <text x="79" y="64" fill="#68736A" font-family="ui-monospace, monospace" font-size="7.5" letter-spacing="1.05">A CLEARER WAY THROUGH SERVICES</text>
+</svg>

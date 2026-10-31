@@ -1,0 +1,15 @@
+node_modules/
+frontend/.next/
+frontend/out/
+frontend/next-env.d.ts
+backend/.venv/
+backend/__pycache__/
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/*.egg-info/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.DS_Store

@@ -1,0 +1,9 @@
+packages:
+  - frontend
+
+allowBuilds:
+  '@next/swc': true
+  '@tailwindcss/oxide': true
+  esbuild: true
+  sharp: true
+  lightningcss: true

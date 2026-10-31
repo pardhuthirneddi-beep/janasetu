@@ -17,8 +17,9 @@
 - Added 22 source-linked catalog rows across seven categories (21 partially verified; one not verified; none fully verified) and idempotently loaded them into the managed database.
 - Applied the additive Alembic schema revision to the managed MySQL database. Database TLS options are normalized to PyMySQL with CA and hostname verification enabled; no destructive reset was performed.
 - Added private managed-storage upload/download handlers, actor-labelled public status history, citizen-visible public Action Taken summaries, and staff-private internal data separation.
-- Backend tests pass against isolated in-memory SQLite (10 tests). The optimized Next.js build and TypeScript check pass. Preview health, nine-route manifest and source-backed service API return successfully. The application uses browser-mediated OAuth; no fake identity or sample grievance was introduced.
+- Backend tests pass against isolated in-memory SQLite (10 tests). The optimized Next.js build and TypeScript check pass. The Preview health, nine-route manifest and source-backed service API return successfully. No Preview login was simulated; actual OAuth remains browser-mediated.
 - Full verification of 20 service profiles, verified geographic boundaries, government complaint APIs, outbound citizen notification and physical object deletion remain explicitly unavailable/open.
+
 
 ## 2026-10-31 — existing Preview rendering repair and civic redesign
 
@@ -27,4 +28,4 @@
 - Added home-only Lenis smooth scrolling, GSAP/ScrollTrigger section reveals, reduced-motion-aware Framer Motion route entrances and CSS hover/focus treatment. The browser confirmed local fonts are available, the bridge image loads, Lenis activates, scroll reveals become visible, and the test captured no client runtime errors.
 - Verified the directory’s existing search and category filter in-browser (a “birth” query returned the relevant two records; the Health filter returned its three records; all 22 cards restored). Browser navigation from Services to the Birth certificate detail worked and showed the official source link. All nine page routes and `/manus-routes.json` returned HTTP 200; the manifest matches App Router source.
 - Captured final Preview layouts at desktop (1280×1000), tablet (768×1024) and phone (390×844). Frontend TypeScript and the production `next build` passed, including Next lint/type checks. The isolated backend suite remains 10/10 passing; its only output was upstream/Pydantic deprecation warnings. No grievance was submitted and no synthetic cases were added.
-- Preview was restarted successfully after the production build. The existing project auto-publish setting was enabled, so the canonical checkpoint push submitted the configured publication request. Completion appears in the Dashboard; no final production URL was available to report here.
+- Preview was restarted successfully after the production build. Public publication was not requested and was not triggered.
